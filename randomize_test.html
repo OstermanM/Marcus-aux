@@ -1,11 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Redirecting...</title>
 <script>
-  // Generate random number between 0 and 1
-  const r = Math.random();
+const r = Math.random();
 
-  // 50/50 split (adjust threshold as needed)
-  if (r < 0.5) {
-    window.location.href = "https://siteA.com";
-  } else {
-    window.location.href = "https://siteB.com";
-  }
+if (r < 0.5) {
+  window.location.replace("https://siteA.com");
+} else {
+  window.location.replace("https://siteB.com");
+}
 </script>
+</head>
+<body>
+Redirecting...
+</body>
+</html>
