@@ -4,15 +4,19 @@
 <meta charset="UTF-8">
 <title>Redirecting...</title>
 <script>
-const r = Math.random();
+let choice = localStorage.getItem("choice");
 
-if (r < 0.5) {
-  window.location.replace("https://siteA.com");
-} else {
-  window.location.replace("https://siteB.com");
+if (!choice) {
+  choice = Math.random() < 0.5 ? "A" : "B";
+  localStorage.setItem("choice", choice);
 }
-</script>
-</head>
+
+window.location.replace(
+  choice === "A"
+    ? "https://siteA.com"
+    : "https://siteB.com"
+);
+</script></head>
 <body>
 Redirecting...
 </body>
