@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Redirecting...</title>
+<script>
+let choice = localStorage.getItem("choice");
+
+if (!choice) {
+  choice = Math.random() < 0.5 ? "A" : "B";
+  localStorage.setItem("choice", choice);
+}
+
+window.location.replace(
+  choice === "A"
+    ? "https://doit.medfarm.uu.se/bin/kurt3/kurt/8905085"
+    : "https://doit.medfarm.uu.se/bin/kurt3/kurt/8905104"
+);
+</script></head>
+<body>
+Redirecting...
+</body>
+</html>
